@@ -1,0 +1,29 @@
+[project]
+name = "t5x"
+version = "0.1.0"
+description = "T5-eXtended in JAX"
+authors = [
+    {name = "tylebrow",email = "tyler.brown@gartner.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+
+dependencies = [
+  "jax[cuda12]",
+  "jaxlib",
+  "numpy",
+  "t5",
+]
+
+[tool.poetry.dependencies]
+absl_py = { git="https://github.com/abseil/abseil-py.git" }
+clu = { git="https://github.com/google/CommonLoopUtils.git" }
+flax = { git="https://github.com/google/flax.git" }
+gin_config = { git="https://github.com/google/gin-config.git" }
+orbax = { git="https://github.com/google/orbax.git" }
+eqio = { git="https://github.com/google/seqio.git" }
+tensorstore = { git="https://github.com/google/tensorstore.git" }
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
